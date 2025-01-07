@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('git cloning') {
             steps {
-                git 'https://github.com/biswajit-70/ec2-maven.git'
+                git 'https://github.com/biswajit-70/ec2-maven'
                 echo 'cloning successfully'
             }
         }
