@@ -1,12 +1,12 @@
 pipeline{
 stages{
-stage{
+stage('cloning'){
 tools{
 jdk 'JAVA_HOME'
 maven 'M2_SYST'
 }
 agent{
-label'default'
+label 'default'
 }
 steps{
  git 'https://github.com/biswajit-70/ec2-maven.git'
