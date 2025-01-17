@@ -22,7 +22,7 @@ pipeline {
 			}	 
             steps {
                 git 'https://github.com/biswajit-70/ec2-maven.git'
-				sh 'mvn compile'
+				sh 'mvn package'
             }
         }
     }
