@@ -1,4 +1,5 @@
 pipeline {
+    agent none
      stages {
         stage('compile') {
 		    agent{
@@ -7,9 +8,9 @@ pipeline {
 			jdk 'JAVA_WIND'
 			maven 'M2_WIND'
 			}	 
-          steps {
+            steps {
                 git 'https://github.com/biswajit-70/ec2-maven.git'
-			            	bat 'mvn compile'
+				bat 'mvn compile'
             }
         }
 		stage('package') {
@@ -21,7 +22,7 @@ pipeline {
 			}	 
             steps {
                 git 'https://github.com/biswajit-70/ec2-maven.git'
-	            			sh 'mvn compile'
+				sh 'mvn compile'
             }
         }
     }
